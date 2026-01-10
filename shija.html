@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Golden Eagle — Shijet</title>
+  <style>
+    :root{
+      --gold:#d4af37;
+      --dark:#0b0b0b;
+      --glass:rgba(255,255,255,0.06);
+      font-family:"Poppins",sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0f0f10 0%,#131316 60%);color:#fff;line-height:1.45;overflow-x:hidden}
+
+    /* HEADER */
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:20px 32px;
+      position:sticky;top:0;
+      background:rgba(0,0,0,0.3);backdrop-filter:blur(8px);
+      z-index:1000;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand h1{margin:0;font-size:22px}
+    .brand p{margin:0;font-size:12px;color:#fff}
+
+    /* GOLD SHINY */
+    .gold-shiny {
+      background: linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      animation: shine 4s linear infinite;
+      font-weight: 700;
+    }
+    @keyframes shine {
+      0% {background-position:0%;}
+      100% {background-position:200%;}
+    }
+
+    /* CARDS FLAVORS */
+    .flavor-section{
+      padding:40px 50px;
+      margin-top:40px;
+    }
+    .flavor-title{
+      font-size:36px;
+      color:var(--gold);
+      margin-bottom:20px;
+      text-align:center;
+      text-shadow:0 0 12px rgba(212,175,55,0.35);
+    }
+    .flavor-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+      gap:22px;
+      margin-top:30px;
+    }
+    .flavor-card{
+      background:linear-gradient(180deg,#0d0d0d,#151515);
+      border:1px solid rgba(212,175,55,0.18);
+      padding:18px;
+      border-radius:16px;
+      text-align:center;
+      transition:.35s;
+      box-shadow:0 0 18px rgba(212,175,55,0.09);
+      animation:fadein 1.2s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .flavor-card:hover{
+      transform:translateY(-8px) scale(1.03);
+      box-shadow:0 0 26px rgba(212,175,55,0.25);
+    }
+    .flavor-card h3{
+      color:var(--gold);
+      margin-top:14px;
+      font-size:20px;
+    }
+    .flavor-card p{
+      font-size:14px;
+      color:#fff;
+      margin:10px 0 0;
+    }
+    .flavor-img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:12px;
+      animation:floaty 6s ease-in-out infinite;
+    }
+
+    .shine-text{
+      background:linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-size:200%;
+      animation:shine 4s linear infinite;
+    }
+
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes fadein{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+
+    /* INFO SECTION GRID */
+    .info-section {
+      padding: 40px 50px;
+    }
+
+    .info-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .info-grid p {
+      padding: 14px 22px;
+      font-size: 16px;
+      line-height: 1.6;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(4px);
+      border-left: 3px solid var(--gold);
+      animation: fadeUp 1.3s ease forwards;
+      opacity: 0;
+      text-align: left;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Grid */
+    @media (max-width: 900px) {
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer{
+      padding:18px 48px;text-align:center;color:#bbb;
+      border-top:1px solid rgba(255,255,255,0.05)
+    }
+    
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+  <!-- KTHEHU MBRAPA BUTTON -->
+  <a href="Golden-Eagle-Website.html" style="display:inline-block;margin:20px 32px;padding:8px 14px;background:#d4af37;color:#000;text-decoration:none;border-radius:8px;font-weight:600;">← Kthehu mbrapa</a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <h1><span class="gold-shiny">Golden Eagle</span></h1>
+      <p>Pija energjetike • Krenari Kosovare</p>
+    </div>
+  </header>
+
+  <!-- SHIJET CARDS -->
+  <section class="flavor-section">
+    <h2 class="flavor-title shine-text">Shijet e Golden Eagle Energy Drink</h2>
+    <div class="flavor-grid">
+
+      <div class="flavor-card">
+        <img src="original.jpg" class="flavor-img">
+        <h3>Original</h3>
+        <p>Shija klasike që të mbush me energji dhe fokus.</p>
+      </div>
+
+      <div class="flavor-card">
+        <img src="330ml.webp" class="flavor-img">
+        <h3>330ml Premium</h3>
+        <p>Kanaçe standarde me formulë të pasur, ideale për energji të gjatë.</p>
+      </div>
+
+      <div class="flavor-card">
+        <img src="tropical.jpg" class="flavor-img">
+        <h3>Tropical</h3>
+        <p>Mango, ananas dhe fruta tropikale për freski të jashtëzakonshme.</p>
+      </div>
+
+      <div class="flavor-card">
+        <img src="coffe.jpg" class="flavor-img">
+        <h3>Coffee Energy</h3>
+        <p>Energji me shije kafeje — perfekte për mëngjes ose fokus të gjatë.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INFORMACION RRETH SHIJEVE -->
+  <section class="info-section">
+    <h2>Rreth Shijeve te <span class="gold-shiny">Golden Eagle</span></h2>
+    <div class="underline"></div>
+
+    <div class="info-grid">
+      <p>Çdo kanaçe e shijes së preferuar është një ftesë për të filluar ditën me energji, për të arritur objektivat dhe për të ndjerë fuqinë e vërtetë Golden Eagle. ⚡🏆</p>
+
+      <p>Golden Eagle ofron një gamë të gjerë shijesh të krijuara me kujdes për të plotësuar çdo stil jete dhe çdo preferencë personale. ⚡🥤</p>
+
+      <p>Shija Original ka mbetur simboli kryesor i markës, me një kombinim të balancuar të ëmbëlsisë dhe energjisë së shpejtë. 🔥💪</p>
+
+      <p>Varianti Premium 330ml është për ata që kërkojnë më shumë — më shumë shije, më shumë energji dhe më shumë freski në një kanaçe më të madhe. 🥇🥤</p>
+
+      <p>Shija Tropical sjell aromat më të pastra të mangos, ananasit dhe frutave të egra, të cilat krijojnë një shpërthim të freskisë verore. 🌴🍍🥭</p>
+
+      <p>Edicioni Coffee Energy është zgjedhja perfekte për dashamirësit e kafesë, duke bashkuar kafeinën natyrale me shijen aromatike të kafesë së vërtetë. ☕⚡</p>
+
+      <p>Çdo shije e Golden Eagle është testuar dhe rafinuar për të siguruar energji të qëndrueshme pa rënie të menjëhershme, duke e bërë të përshtatshme për sportistë, studentë dhe profesionistë. 🏋️‍♂️📚💻</p>
+
+      <p>Kombinimet e veçanta të vitaminave dhe aromave e bëjnë Golden Eagle një ndër pijet energjetike me reputacionin më të lartë në tregun rajonal. 🌟🍋</p>
+
+      <p>Golden Eagle gjithmonë inovon duke sjellë shije të reja bazuar në preferencat e konsumatorëve dhe trendet globale. 🌍✨</p>
+
+      <p>Pavarësisht cilën shije zgjedh, secila kanaçe përfaqëson punën e palodhur, cilësinë dhe pasionin që kompania investon në çdo produkt. ❤️🦅</p>
+
+      <p>Për ata që duan një eksperiencë më të personalizuar, Golden Eagle ofron edhe edicione limituara me aromë speciale dhe paketim unik. 🎁🔥</p>
+
+      <p>Shijet e Golden Eagle nuk janë vetëm për energji — ato krijojnë momente kënaqësie dhe freskie që mund t’i ndash me miqtë dhe familjen. 🤗🥤🎉</p>
+
+      <p>Duke kombinuar inovacionin me traditën kosovare, Golden Eagle vazhdon të jetë simbol i energjisë, pasionit dhe krenarisë vendore. 🇽🇰💛</p>
+
+      <p>Çdo kanaçe e shijes së preferuar është një ftesë për të filluar ditën me energji, për të arritur objektivat dhe për të ndjerë fuqinë e vërtetë Golden Eagle. ⚡🏆</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p style="color:#fff;">© <span class="gold-shiny">Golden Eagle</span> — E krijuar në Kosovë 🦅</p>
+  </footer>
+
+</body>
+</html>

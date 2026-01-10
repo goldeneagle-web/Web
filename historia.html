@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Golden Eagle — Historia</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold:#d4af37;
+      --dark:#0b0b0b;
+      --glass:rgba(255,255,255,0.06);
+      font-family:"Poppins",sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#0f0f10 0%,#131316 60%);
+      color:#fff;
+      line-height:1.45;
+      overflow-x:hidden;
+    }
+
+    /* HEADER (e njëjta si faqja kryesore) */
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:20px 32px;
+      position:sticky;top:0;
+      background:rgba(0,0,0,0.3);
+      backdrop-filter:blur(8px);
+      z-index:1000;
+    }
+    
+
+    /* GENERAL ANIMATIONS */
+    @keyframes fadePage{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);} }
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)} }
+    @keyframes shine{0%{background-position:0%;}100%{background-position:200%;} }
+
+    .shine-text{
+      background:linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-size:200%;
+      animation:shine 4s linear infinite;
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:80px 30px;
+      animation:fadePage 1.2s ease;
+    }
+    .hero h1{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      color:#ccc;
+      font-size:17px;
+    }
+
+    /* CHAPTER SECTIONS */
+    .chapter{
+      padding:60px 45px;
+      background:rgba(255,255,255,0.03);
+      border-top:1px solid rgba(212,175,55,0.15);
+      border-bottom:1px solid rgba(212,175,55,0.15);
+      animation:fadePage 1.2s ease;
+    }
+    .chapter h2{
+      font-size:32px;color:var(--gold);
+      text-shadow:0 0 12px rgba(212,175,55,0.35);
+    }
+    .underline{
+      width:90px;height:3px;background:var(--gold);
+      border-radius:10px;margin:10px 0 20px;
+      animation:grow 1.5s ease;
+    }
+    @keyframes grow{from{width:0;}to{width:90px;}}
+
+    .chapter p{
+      opacity:0;
+      animation:fadeInUp 1s forwards;
+      font-size:16px;margin-bottom:16px;color:#e7e7e7;
+      max-width:900px;
+    }
+    .chapter p:nth-child(3){animation-delay:.2s;}
+    .chapter p:nth-child(4){animation-delay:.4s;}
+    .chapter p:nth-child(5){animation-delay:.6s;}
+
+    .gold-box{
+      background:linear-gradient(180deg,#191919,#0d0d0d);
+      border:1px solid rgba(212,175,55,0.25);
+      padding:18px;border-radius:14px;
+      margin-top:20px;
+      animation:floaty 7s ease-in-out infinite;
+      box-shadow:0 0 15px rgba(212,175,55,0.15);
+      max-width:500px;
+    }
+
+    footer{
+      padding:18px 48px;text-align:center;color:#bbb;
+      border-top:1px solid rgba(255,255,255,0.05)
+    }
+
+    .gold-shiny {
+      background: linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      animation: shine 4s linear infinite;
+      font-weight: 700;
+    }
+    @keyframes shine {
+      0% {background-position:0%;}
+      100% {background-position:200%;}
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!-- KTHEHU MBRAPA BUTTON -->
+<a href="Golden-Eagle-Website.html" style="display:inline-block;margin:20px 32px;padding:8px 14px;background:#d4af37;color:#000;text-decoration:none;border-radius:8px;font-weight:600;">← Kthehu mbrapa</a>
+
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="shine-text">Historia e Golden Eagle 🦅</h1>
+  <p>Një udhëtim nga një ide lokale tek një markë globale që përfaqëson guxim, energji dhe ambicie 🌍✨.</p>
+</section>
+
+<!-- CHAPTER 1 -->
+<section class="chapter">
+  <h2 class="shine-text">Fillimet — Ideja që lindi në zemër të Kosovës</h2>
+  <div class="underline"></div>
+
+  <p>
+    Historia e Golden Eagle fillon në fund të viteve ’90, në një kohë të vështirë për vendin, kur pak besonin se një produkt i krijuar në Kosovë
+    mund të kishte ndonjëherë sukses ndërkombëtar 🌟. Por pikërisht atëherë lindi ideja për një pije energjetike që do të përfaqësonte fuqinë,
+    shpresën dhe qëndrueshmërinë e një populli të tërë 💪.
+  </p>
+
+  <p>
+    Vizioni ishte i qartë: të krijohej një produkt cilësor që jo vetëm të rivalizonte brendet ndërkombëtare, por të krijonte një identitet unik 🏆.
+    Logoja me shqiponjën dykrerëshe nuk ishte thjesht dizajn — ajo përfaqësonte krenarinë, historinë dhe ambicien për të fluturuar lart 🦅.
+  </p>
+
+  <p>
+    Me një ekip të vogël por të vendosur, filluan testimet e para të formulës. Synimi ishte të krijohej një pije që do të ofronte energji ⚡,
+    por njëkohësisht të ishte e balancuar dhe me shije të plotë. Pas shumë testime dhe modifikime, lindi Golden Eagle Original 🥤.
+  </p>
+
+  <div class="gold-box">
+    <p><strong style="color:var(--gold)">Fakt interesant:</strong> Formula origjinale u testua mbi 40 herë derisa u arrit balanca perfekte 🔬✅.</p>
+  </div>
+</section>
+
+<!-- CHAPTER 2 -->
+<section class="chapter">
+  <h2 class="shine-text">Ekspansioni — Nga Kosova drejt Evropës dhe botës</h2>
+  <div class="underline"></div>
+
+  <p>
+    Suksesi i parë i Golden Eagle u vërejt brenda tregut lokal. Konsumatorët e pëlqyen dizajnin, shijen dhe mesazhin e fortë që përfaqësonte 💛.
+    Shpejt, prodhimi u rrit dhe markës iu hapën dyert edhe jashtë Kosovës ✈️.
+  </p>
+
+  <p>
+    Brenda pak viteve, Golden Eagle filloi të eksportohej në vende si Shqipëria, Maqedonia, Gjermania, Austria dhe Zvicra 🇦🇱🇲🇰🇩🇪🇦🇹🇨🇭.
+    Për një produkt të krijuar në Kosovë, ky ishte një moment historik — një dëshmi se cilësia dhe vizioni nuk njohin kufij 🌟.
+  </p>
+
+  <p>
+    Partneritetet me distributorë të mëdhenj e shtynë markën të rritet edhe më shpejt. Dizajni u modernizua, u shtuan shije të reja 🍋☕🥭,
+    dhe fabrika kaloi në teknologji të fundit për paketim dhe prodhim 🏭.
+  </p>
+
+  <div class="gold-box">
+    <p><strong style="color:var(--gold)">Sot:</strong> Golden Eagle shitet në mbi 30 vende të botës 🌐 dhe vazhdon të zgjerohet çdo vit 📈.</p>
+  </div>
+</section>
+
+<!-- CHAPTER 3 -->
+<section class="chapter">
+  <h2 class="shine-text">Inovacioni — Evolucioni i një marke pa kompromis </h2>
+  <div class="underline"></div>
+
+  <p>
+    Përveç shijes klasike, Golden Eagle investoi në zhvillimin e versioneve Premium 330ml, Tropical dhe Coffee Edition 🥤🍍☕.
+    Çdo shije përmban karakteristika unike, por ruan ADN-në e markës: energji ⚡, qëndrueshmëri dhe autentikitet.
+  </p>
+
+  <p>
+    Dizajni i kanaçes ka kaluar disa faza evoluimi, duke integruar efekte metalike ✨, konture moderne dhe ngjyra më të pastra,
+    duke e bërë produktin më të dukshëm në raftet e marketeve 🛒.
+  </p>
+
+  <p>
+    Fabrika e Golden Eagle përdor sot një nga teknologjitë më të avancuara të prodhimit në rajon 🏭, duke siguruar cilësi të lartë
+    dhe standarde evropiane për çdo kanaçe që del nga linja ✅.
+  </p>
+
+  <div class="gold-box">
+    <p><strong style="color:var(--gold)">Investim i përvitshëm:</strong> Mbi 2 milionë euro investohen çdo vit në teknologji dhe inovacion 💰.</p>
+  </div>
+</section>
+
+<!-- CHAPTER 4 -->
+<section class="chapter">
+  <h2 class="shine-text">E ardhmja — Golden Eagle si markë globale </h2>
+  <div class="underline"></div>
+
+  <p>
+    Golden Eagle nuk është më vetëm një pije energjetike. Është një histori suksesi që përfaqëson një popull të tërë 🇽🇰.
+    Synimet për të ardhmen janë të mëdha: hyrja në tregjet amerikane, afrikanë dhe aziatikë ka nisur tashmë 🌎✈️.
+  </p>
+
+  <p>
+    Përmirësimi i formulave, shtimi i produkteve të reja 🍋☕🥭 dhe investimet e mëdha në marketing global po e pozicionojnë Golden Eagle
+    si një konkurrues serioz për brendet më të mëdha botërore 🏆.
+  </p>
+
+  <p>
+    Mesazhi mbetet i njëjtë që nga dita e parë: çdo person mund të fluturojë lart nëse ka energjinë ⚡ dhe guximin 💪 për të ecur përpara.
+  </p>
+
+  <div class="gold-box">
+    <p><strong style="color:var(--gold)">Vizion:</strong> Të bëhet pija energjetike nr.1 nga Ballkani në botë 🌍✨.</p>
+  </div>
+</section>
+
+<footer>
+    <p style="color:#fff;">© <span class="gold-shiny">Golden Eagle</span> — E krijuar në Kosovë 🦅</p>
+  </footer>
+
+</body>
+</html>
