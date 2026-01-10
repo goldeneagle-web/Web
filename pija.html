@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rreth Pijes — Golden Eagle</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f10;
+      color: #fff;
+      font-family: Poppins, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a.back {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      margin: 20px 40px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+    a.back:hover {
+      background: #f7d25a;
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      background: url('eagle.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid #d4af37;
+      box-shadow: inset 0 0 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .hero-text {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s linear infinite;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      animation: fadeIn .8s ease forwards;
+      opacity: 0;
+    }
+
+    h2 {
+      color: #d4af37;
+      margin-top: 0;
+      animation: slideDown .7s ease;
+    }
+    h3 {
+      color: #ffd875;
+      margin-top: 25px;
+      animation: fadeIn .9s ease;
+    }
+
+    @keyframes fadeIn { 
+      from { opacity: 0; transform: translateY(10px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    @keyframes slideDown { 
+      from { opacity: 0; transform: translateY(-15px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+
+    .can-box { 
+      margin: 30px 0;
+      display: flex; 
+      justify-content: center; 
+      perspective: 1000px;
+    }
+
+    .can { 
+      width: 100%; 
+      height: 100%; 
+      max-width: 380px; 
+      max-height: 580px; 
+      position: relative; 
+      border-radius: 20px; 
+      overflow: hidden; 
+      animation: floatScale 5s ease-in-out infinite; 
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    .glow { 
+      position: absolute; 
+      inset: 0; 
+      background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.3), transparent 70%); 
+      filter: blur(30px); 
+      opacity: .5; 
+    }
+
+    @keyframes floatScale { 
+      0%, 100% { transform: translateY(0) scale(1) rotate(0deg); } 
+      25% { transform: translateY(-10px) scale(1.02) rotate(2deg); } 
+      50% { transform: translateY(-15px) scale(1.03) rotate(-2deg); } 
+      75% { transform: translateY(-10px) scale(1.02) rotate(1deg); }
+    }
+
+    .info-box { 
+      background: rgba(255, 255, 255, 0.05); 
+      padding: 22px; 
+      border-radius: 14px; 
+      margin: 25px 0; 
+      border-left: 5px solid #d4af37; 
+      transition: all 0.3s ease;
+    }
+    .info-box:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-left-color: #ffe9a5;
+      transform: translateX(5px);
+    }
+
+    .shine-text { 
+      background: linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      background-size: 200%; 
+      animation: shine 4s linear infinite; 
+    }
+
+    .can-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gold-shiny {
+      background: linear-gradient(90deg, #b8922a, #ffe9a5, #b8922a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      animation: shine 4s linear infinite;
+      font-weight: 700;
+    }
+
+    @keyframes shine {
+      0% { background-position: 0%; }
+      100% { background-position: 200%; }
+    }
+
+    footer {
+      padding: 20px 40px;
+      text-align: center;
+      color: #bbb;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 50px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<a href="Golden-Eagle-Website.html" class="back">← Kthehu mbrapa </a>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1></h1>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="shine-text">Rreth Pijes Energjetike Golden Eagle</h2>
+
+  <div class="can-box">
+    <div class="can">
+     
+      <div class="glow"></div>
+    </div>
+  </div>
+
+  <p>
+    Golden Eagle është një pije energjetike premium e prodhuar në zemër të Kosovës 🇽🇰.
+    Që nga dita e parë, qëllimi ka qenë i qartë: të krijohet një pije që jo vetëm jep
+    energji ⚡, por edhe përfaqëson traditën, punën dhe ambicien shqiptare 🦅.
+  </p>
+
+  <p>
+    Formula e saj ofron një ngritje të menjëhershme të fokusit 🧠,
+    vigjilencës dhe performancës pa lodhje të mëvonshme. Falë balancimit të
+    kafeinës ☕, vitaminave 💊 dhe përbërësve naturalë 🌿, Golden Eagle
+    ruan energjinë e qëndrueshme për orë të tëra ⏱️.
+  </p>
+
+  <div class="info-box">
+    Golden Eagle njihet për aromën e saj të veçantë dhe notes freskie 🌿 që e dallojnë nga
+    pijet e tjera energjike. Shija është e butë dhe jo agresive, duke e 
+    bërë një zgjedhje ideale për konsum të rregullt.
+  </div>
+
+  <h3>Çfarë e bën unikale? ✨</h3>
+  <ul>
+    <li>Kafeinë e ekuilibruar për fokus të vazhdueshëm 🧠</li>
+    <li>Shije natyrale, pa ngjyrues artificial 🌿</li>
+    <li>Formula me vitaminë B për energji të pastër 💊</li>
+    <li>Dizajn modern me elemente të identitetit kosovar 🇽🇰</li>
+    <li>Prodhim cilësor me standarte evropiane 🏭</li>
+    <li>E certifikuar për siguri ushqimore dhe cilësi ✅</li>
+  </ul>
+
+  <h3>Si prodhohet? 🏭</h3>
+  <p>
+    Prodhimi kalon në disa faza të kontrolluara me kujdes. Lëngjet përzihen në temperatura të rregulluara 🌡️, filtrohen dhe sterilizohen për të ruajtur shijen dhe sigurinë. Çdo kanaçe inspektohet para paketimit 📦.
+  </p>
+
+  <div class="info-box">
+    <strong>Fun fact 🧐:</strong> Golden Eagle është një nga pijet energjike më të shitura në rajon.
+  </div>
+
+</div>
+
+<footer>
+    <p style="color:#fff;">© <span class="gold-shiny">Golden Eagle</span> — E krijuar në Kosovë 🦅</p>
+</footer>
+
+</body>
+</html>
